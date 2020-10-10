@@ -59,6 +59,14 @@ body {
     .minute,
     .second {
         position: absolute;
+
+        .hr,
+        .min,
+        .sec {
+            --rotation: 0;
+            transform: translateX(-50%) rotate(calc(var(--rotation) * 1deg));
+            // transform: translateY(50%);
+        }
     }
 
     .hour {
@@ -66,6 +74,7 @@ body {
             width: 160px;
             height: 160px;
             opacity: 0.8;
+            top: -82px;
 
             &::before {
                 content: '';
@@ -84,6 +93,8 @@ body {
             width: 200px;
             height: 190px;
             opacity: 0.8;
+            top: -94px;
+            left: 1px;
 
             &::before {
                 content: '';
@@ -102,6 +113,8 @@ body {
             width: 250px;
             height: 285px;
             opacity: 0.8;
+            top: -143px;
+            left: 1px;
 
             &::before {
                 content: '';
@@ -131,7 +144,7 @@ body {
     left: 50%;
     transform: translateX(-50%) translateY(-50%);
     color: red;
-    font-size: 60px;
+    font-size: 20px;
     font-family: Orbitron;
     letter-spacing: 7px;
 
