@@ -11,7 +11,17 @@
 <body id="body">
     
     <div id="digitalClock" ></div>
-    <div class="clock">
+
+    <div id="light-mode-toggler"> 
+        <label class="label"> 
+            <div class="toggle">
+                <input class="toggle-state" type="checkbox" id="toggler-btn" onclick="enableLightMode();"/>
+                <div class="indicator"></div>
+            </div>
+        </label>
+    </div>
+
+    <div class="clock" id="clock">
         <div class="hour">
             <div class="hr" id="hr" date-hour-hand></div>
         </div>
@@ -42,6 +52,8 @@
             <div class="web"><i class="fab fa-chrome"></i></div>
         </a>
     </div>
+
+    
 
     <script src="js/app.js"></script>
     <script src="vendor/font-awesome/node_modules/@fortawesome/fontawesome-free/js/all.js"></script>

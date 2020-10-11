@@ -52,3 +52,18 @@ function showTime(){
 	document.getElementById("body").style.backgroundColor = backcolor;
 	setTimeout(showTime, 1000);
 }
+
+function enableLightMode() {
+	var togglerBtn = document.getElementById('toggler-btn');
+
+	if(togglerBtn.checked == false) {
+		document.getElementById("body").classList.remove('body-light');
+		document.getElementById("clock").classList.remove('clock-light');
+		document.getElementById("clock").classList.add('clock');
+	} else if (togglerBtn.checked == true) {
+		document.getElementById("body").classList.add('body-light');
+		document.getElementById("clock").classList.add('clock-light');
+		document.getElementById("clock").classList.remove('clock');
+		alert("Light Mode Enabled");
+	}
+}
